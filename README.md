@@ -1,9 +1,11 @@
-## Welcome to GitHub Pages
+## Welcome to my GitHub Page
 
 Some of my collaborated projects
 
 ![Ocean Sentinel](assets/img/OceneSentinel.jpg)
 
-[Ocen Sentinal](http://brockbarlow.github.io/ADGP115-Production-Teams/)
+[Ocean Sentinal](http://brockbarlow.github.io/ADGP115-Production-Teams/)
 
-A game inspired by tower defence, where a tower hovering in the water defended by one ship
+Is a tower defencce game, really being a tower in the middle of the ocean being defended by a
+
+a ship by there cost.

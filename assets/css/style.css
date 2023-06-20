@@ -1,45 +1,47 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 50px;
+  padding: 10;
   box-sizing: border-box;
   background-color: #000000;
-  color: #333333;
+  color: #8a8a8a;
 }
 
 .profile {
   position: fixed;
   left: 0;
-  top: 0;
+  top: 200;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
-  width: 50vw;  /* Adjusted to take up half the viewport width */
-  height: 85vh;
+  width: 100mm;  /* Adjusted to take up half the viewport width */
+  height: 65vh;
   background-color: #000000;  /* Blend with body background color */
 }
 
 .profile img {
-  width: 100%;
+  width: 300px;
   height: auto; /* Adjusted to scale proportionally with width */
   object-fit: cover;
 }
 
 .content {
-  margin-left: 50vw;  /* Adjusted to match .profile width */
-  padding: 20px;
+  margin-left: 700px;  /* Adjusted to match .profile width */
+  padding: 80px;
 }
 
+
+
 .content img {
-  width: calc(1000px); /* calculates the width for 3 images per row, adjust as needed */
-  height: 50;
+  width: calc(500px); /* calculates the width for 3 images per row, adjust as needed */
+  height: 30%;
 }
 
 #contact {
     text-align: right;  /* align text to the right */
-    margin-right: 300px;  /* space from the right edge of content area */
+    margin-right: 100px;  /* space from the right edge of content area */
     align-self: center;  /* center vertically within content area */
 }
 
@@ -48,7 +50,7 @@ header {
 }
 
 h1, h2, h3 {
-  color: #333;
+  color: rgb(133, 130, 130);
 }
 
 h1 {
@@ -59,8 +61,12 @@ h2 {
   margin-bottom: 1em;
 }
 
+a{
+  color: #333;
+}
+
 main {
-  margin: 50px;
+  margin: -100px;
 }
 
 .project-grid {
@@ -70,8 +76,9 @@ main {
 }
 
 .project-card {
-  padding: 20px;
-  border-radius: 10px;
+  position: fixed;
+  padding: -50px;
+  border-radius: px;
   background-color: black;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -79,7 +86,7 @@ main {
 .project-images {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px; /* spacing between images */
+  gap: 20px; /* spacing between images */
 }
 
 .project-images img {
@@ -88,9 +95,9 @@ main {
 }
 
 footer#contact {
-  text-align: center;  /* Center align text */
-  padding: 100px;
+  text-align: left;  /* Center align text */
+  padding: 200px;
   background-color: #000000;  /* Blend with body background color */
   color: #333;
-  margin-left: 70vw;
+  margin-left: 700px;
 }

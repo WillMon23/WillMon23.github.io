@@ -4,7 +4,7 @@ body {
   padding: 10;
   box-sizing: border-box;
   background-color: #000000;
-  color: #8a8a8a;
+  color:#bdbe6c;
 }
 
 .profile {
@@ -50,7 +50,7 @@ header {
 }
 
 h1, h2, h3 {
-  color: rgb(133, 130, 130);
+  color: #dc5f23;
 }
 
 h1 {
@@ -62,7 +62,7 @@ h2 {
 }
 
 a{
-  color: #333;
+  color: #efbf5a;
 }
 
 main {
@@ -79,7 +79,7 @@ main {
   position: fixed;
   padding: -50px;
   border-radius: px;
-  background-color: black;
+  background-color: #2a1e35;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 

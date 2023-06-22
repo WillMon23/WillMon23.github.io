@@ -16,11 +16,10 @@ body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  width: 100mm;  /* Adjusted to take up half the viewport width */
+  width: 180mm;  /* Adjusted to take up half the viewport width */
   height: 65vh;
   background-color: #000000;  /* Blend with body background color */
 }
-
 .profile img {
   width: 300px;
   height: auto; /* Adjusted to scale proportionally with width */

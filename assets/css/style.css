@@ -1,5 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 50px;
   padding: 10;
   box-sizing: border-box;
@@ -18,7 +23,6 @@ body {
   padding: 20px;
   width: 180mm;  /* Adjusted to take up half the viewport width */
   height: 65vh;
-  background-color: #000000;  /* Blend with body background color */
 }
 .profile img {
   width: 300px;
@@ -31,9 +35,15 @@ body {
   padding: 80px;
 }
 
+.content img {
+  width: calc(500px); /* calculates the width for 3 images per row, adjust as needed */
+  height: 30%;
+}
+
+
 .vertical-line {
-  position: fixed;
-  display: flex;
+  position: relative;
+  display: inline-block;
   height: 2400px;  /* adjust as necessary */
   width: 3px;  /* make the div thin */
   background-color: #dc5f23;  /* change color as desired */
@@ -42,15 +52,16 @@ body {
   left: 650px;
 }
 
-.content img {
-  width: calc(500px); /* calculates the width for 3 images per row, adjust as needed */
-  height: 30%;
+
+a:hover {
+  color: lightblue;
 }
 
-#contact {
-    text-align: right;  /* align text to the right */
-    margin-right: 100px;  /* space from the right edge of content area */
-    align-self: center;  /* center vertically within content area */
+button {
+  display: fixed;
+  width: 25%;
+  font-size: 16px;
+  padding: 10px;
 }
 
 header {

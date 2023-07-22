@@ -30,6 +30,14 @@ body {
   object-fit: cover;
 }
 
+.profile ul{
+  list-style: none;
+  font-weight: 900px;
+}
+
+.profile li{
+  text-align: center;
+}
 .content {
   margin-left: 700px;  /* Adjusted to match .profile width */
   padding: 80px;
@@ -52,16 +60,15 @@ body {
   left: 650px;
 }
 
+a{
+  color: #efbf5a;
+  cursor: pointer;
+  text-decoration: underline;
+}
 
 a:hover {
   color: lightblue;
-}
-
-button {
-  display: fixed;
-  width: 25%;
-  font-size: 16px;
-  padding: 10px;
+  text-decoration: none;
 }
 
 header {
@@ -80,9 +87,7 @@ h2 {
   margin-bottom: 1em;
 }
 
-a{
-  color: #efbf5a;
-}
+
 
 main {
   margin: -100px;

@@ -125,3 +125,15 @@ footer#contact {
   color: #333;
   margin-left: 700px;
 }
+
+@media only screen and (max-width: 600px) {
+  /* CSS rules for screens less than 600px wide (e.g., cell phones) */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* CSS rules for screens between 601px and 1024px wide (e.g., tablets) */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* CSS rules for screens wider than 1024px (e.g., desktops) */
+}

@@ -162,18 +162,18 @@ p span {
   border: 2px double #333;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  transition: transform 0.6s;
+  transition: transform 0.6s, opacity 0.6s;
 }
 
 .project-card[data-state="back"] {
   transform: rotateY(180deg);
-  visibility: hidden;
+  opacity: 0; /* Hide back cards with opacity instead of visibility */
 }
 
 .project-grid[data-state="front"] .project-card[data-state="front"],
 .project-grid[data-state="back"] .project-card[data-state="back"] {
-  visibility: visible;
   transform: rotateY(0deg);
+  opacity: 1; /* Show active cards with opacity */
 }
 
 .project-images img {

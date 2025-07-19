@@ -163,22 +163,22 @@ p span {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border: 2px double #333;
   backface-visibility: hidden;
-}
-
-.project-card[data-state="back"] {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.project-card[data-state="back"] {
   transform: rotateY(180deg);
   visibility: hidden;
 }
 
+.project-grid[data-state="front"] .project-card[data-state="front"],
 .project-grid[data-state="back"] .project-card[data-state="back"] {
   visibility: visible;
-}
-
-.project-grid[data-state="front"] .project-card[data-state="front"] {
-  visibility: visible;
+  position: relative;
 }
 
 .project-grid[data-state="back"] {

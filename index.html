@@ -32,14 +32,14 @@
 
     <section id="about" class="about-section">
         <h2>Who am I ??</h2>
-        <p>I’m a game programmer with a passion for . . . you guessed it Making Games, skilled in Unreal Engine and Unity (C++/C#) from projects like Equinox and Frigid Peak. I've had the chance to collaborat with other artists and programmers to build awesome games. Bringing my expertise in with AI, UI, and environment design to unlock a team’s potential. So what do you say let's create something <span> Epic</span> together!</p>
+        <p>I’m a game programmer with a passion for . . . you guessed it Making Games, skilled in Unreal Engine and Unity (C++/C#) from projects like Equinox and Frigid Peak. I've had the chance to collaborate with other artists and programmers to build awesome games. Bringing my expertise in with AI, UI, and environment design to unlock a team’s potential. So what do you say let's create something <span>Epic</span> together!</p>
     </section>
 
     <section id="portfolio" class="portfolio-section maze-background">
         <h2>That’s cool and all... <br>But the stuff I’m working on is <span>cooler!</span></h2>
         <button class="level-up-btn">Level Up!</button>
-        <div class="project-grid">
-            <div class="project-card">
+        <div class="project-grid" data-state="front">
+            <div class="project-card" data-state="front">
                 <div class="project-images">
                     <img src="./assets/img/Asset_6.png" alt="Equinox Placeholder">
                 </div>
@@ -50,7 +50,7 @@
                 <p><strong>Contribution:</strong> Enemy AI, Game Save, UI Programming, Environment Design</p>
                 <a href="https://theequinox.itch.io/equinox" target="_blank" class="project-link-btn" aria-label="Visit Equinox on itch.io">Play on itch.io</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-state="front">
                 <div class="project-images">
                     <img src="./assets/img/title_test1.png" alt="Frigid Peak Placeholder">
                 </div>
@@ -61,19 +61,64 @@
                 <p><strong>Contribution:</strong> UI Programming, Game Manager and Game Save, Interactable Pick-Ups, Environment Design</p>
                 <a href="https://frigidpeak.itch.io/frigid-peak" target="_blank" class="project-link-btn" aria-label="Visit Frigid Peak on itch.io">Play on itch.io</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-state="front">
                 <div class="project-images">
                     <img src="./assets/img/currently-working-placeholder.jpg" alt="Currently Working">
                 </div>
                 <h3>Currently Working</h3>
                 <p>Stay tuned for my latest game in progress!</p>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-state="front">
                 <div class="project-images">
                     <img src="./assets/img/coming-soon-placeholder.jpg" alt="Coming Soon">
                 </div>
                 <h3>Coming Soon</h3>
                 <p>Stay tuned this is where our next project will go!</p>
+            </div>
+            <!-- Back set of project cards -->
+            <div class="project-card" data-state="back">
+                <div class="project-images">
+                    <img src="./assets/img/placeholder-alpha.jpg" alt="Project Alpha Placeholder">
+                </div>
+                <h3>Project Alpha</h3>
+                <p>Jan 2023 - Mar 2023</p>
+                <p>A prototype game exploring dynamic environments and AI behavior.</p>
+                <p><strong>Developer Environment:</strong> Unreal Engine 5, C++</p>
+                <p><strong>Contribution:</strong> AI Programming, Level Design</p>
+                <a href="#" target="_blank" class="project-link-btn" aria-label="Visit Project Alpha">Learn More</a>
+            </div>
+            <div class="project-card" data-state="back">
+                <div class="project-images">
+                    <img src="./assets/img/placeholder-beta.jpg" alt="Project Beta Placeholder">
+                </div>
+                <h3>Project Beta</h3>
+                <p>Apr 2023 - Jun 2023</p>
+                <p>A multiplayer puzzle game with cooperative mechanics.</p>
+                <p><strong>Developer Environment:</strong> Unity, C#</p>
+                <p><strong>Contribution:</strong> Network Programming, UI Design</p>
+                <a href="#" target="_blank" class="project-link-btn" aria-label="Visit Project Beta">Learn More</a>
+            </div>
+            <div class="project-card" data-state="back">
+                <div class="project-images">
+                    <img src="./assets/img/placeholder-gamma.jpg" alt="Project Gamma Placeholder">
+                </div>
+                <h3>Project Gamma</h3>
+                <p>Jul 2023 - Sep 2023</p>
+                <p>An experimental platformer with unique physics challenges.</p>
+                <p><strong>Developer Environment:</strong> Godot, GDScript</p>
+                <p><strong>Contribution:</strong> Physics Engine, Art Integration</p>
+                <a href="#" target="_blank" class="project-link-btn" aria-label="Visit Project Gamma">Learn More</a>
+            </div>
+            <div class="project-card" data-state="back">
+                <div class="project-images">
+                    <img src="./assets/img/placeholder-delta.jpg" alt="Project Delta Placeholder">
+                </div>
+                <h3>Project Delta</h3>
+                <p>Oct 2023 - Dec 2023</p>
+                <p>A narrative-driven adventure game with branching paths.</p>
+                <p><strong>Developer Environment:</strong> Unreal Engine 4, C++</p>
+                <p><strong>Contribution:</strong> Story System, Environment Art</p>
+                <a href="#" target="_blank" class="project-link-btn" aria-label="Visit Project Delta">Learn More</a>
             </div>
         </div>
     </section>
@@ -99,8 +144,15 @@
     </footer>
 
     <script>
-        document.querySelector('.level-up-btn').addEventListener('click', function() {
-            document.querySelector('.project-grid').scrollIntoView({ behavior: 'smooth' });
+        const levelUpBtn = document.querySelector('.level-up-btn');
+        const projectGrid = document.querySelector('.project-grid');
+
+        levelUpBtn.addEventListener('click', function() {
+            if (projectGrid.dataset.state === 'front') {
+                projectGrid.dataset.state = 'back';
+            } else {
+                projectGrid.dataset.state = 'front';
+            }
         });
     </script>
 </body>

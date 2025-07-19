@@ -107,7 +107,6 @@ h3 {
 p {
   line-height: 1.8;
   margin-bottom: 15px;
-  
 }
 
 p span {
@@ -137,10 +136,24 @@ p span {
   background-color: #45a049;
 }
 
+.level-up-btn:active {
+  animation: bounce 0.3s ease;
+}
+
+@keyframes bounce {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
 .project-grid {
+  position: relative;
+  perspective: 1000px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
 }
 
 .project-card {
@@ -149,6 +162,27 @@ p span {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   border: 2px double #333;
+  backface-visibility: hidden;
+}
+
+.project-card[data-state="back"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+
+.project-grid[data-state="back"] .project-card[data-state="back"] {
+  visibility: visible;
+}
+
+.project-grid[data-state="front"] .project-card[data-state="front"] {
+  visibility: visible;
+}
+
+.project-grid[data-state="back"] {
+  transform: rotateY(180deg);
 }
 
 .project-images img {

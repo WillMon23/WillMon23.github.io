@@ -162,18 +162,36 @@ p span {
   border: 2px double #333;
   backface-visibility: hidden;
   transform-style: preserve-3d;
-  transition: transform 0.6s, opacity 0.6s;
+  transition: transform 0.6s;
 }
 
 .project-card[data-state="back"] {
   transform: rotateY(180deg);
-  opacity: 0; /* Hide back cards with opacity instead of visibility */
+  display: none; /* Hidden by default */
 }
 
-.project-grid[data-state="front"] .project-card[data-state="front"],
-.project-grid[data-state="back"] .project-card[data-state="back"] {
+.project-grid[data-state="front"] .project-card[data-state="front"] {
+  display: block;
   transform: rotateY(0deg);
-  opacity: 1; /* Show active cards with opacity */
+}
+
+.project-grid[data-state="back"] .project-card[data-state="back"] {
+  display: block;
+  transform: rotateY(0deg);
+}
+
+.project-grid[data-state="back"] .project-card[data-state="front"] {
+  display: none;
+}
+
+.project-grid.flipping .project-card[data-state="front"] {
+  transform: rotateY(180deg); /* Rotate out during flip */
+  display: block; /* Temporarily show for animation */
+}
+
+.project-grid.flipping .project-card[data-state="back"] {
+  transform: rotateY(0deg); /* Rotate in during flip */
+  display: block; /* Show for animation */
 }
 
 .project-images img {
@@ -209,15 +227,14 @@ p span {
   gap: 20px;
 }
 
-.contact-info, .map-placeholder {
+.contact-info, .end-and-good-bye {
   flex: 1;
 }
 
-.map-placeholder {
-  background-color: #ccc;
-  height: 200px;
-  text-align: center;
-  padding-top: 80px;
+.end-and-good-bye img {
+  max-width: 100%;
+  width: 200px;
+  height: auto;
 }
 
 footer {

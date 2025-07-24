@@ -36,12 +36,14 @@
     </section>
 
     <section id="portfolio" class="portfolio-section maze-background">
-        <h2>That’s cool and all... <br>But the stuff I’m working on is <span>cooler!</span></h2>
+        <h2>That’s cool and all... <br>But the stuff I've worked on is really <span>COOL!</span></h2>
         <button class="level-up-btn">Level Up!</button>
         <div class="project-grid" data-state="front">
             <div class="project-card" data-state="front">
                 <div class="project-images">
-                    <img src="./assets/img/Asset_6.png" alt="Equinox Placeholder">
+                    <img src="./assets/img/0jzMGR.png" alt="Equinox">
+                    <img src="./assets/img/Asset_6.png" alt="Equinox">
+                    <img src="./assets/img/HighresScreenshot00001.png" alt="Equinox">
                 </div>
                 <h3>Equinox</h3>
                 <p>Dec 2022 - June 2023</p>
@@ -52,7 +54,7 @@
             </div>
             <div class="project-card" data-state="front">
                 <div class="project-images">
-                    <img src="./assets/img/title_test1.png" alt="Frigid Peak Placeholder">
+                    <img src="./assets/img/title_test1.png" alt="Frigid Peak">
                 </div>
                 <h3>Frigid Peak</h3>
                 <p>May - June 2022</p>
@@ -133,9 +135,6 @@
                 <p><i class="fas fa-gamepad"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/will-montero-882956127/" target="_blank">Will Montero</a></p>
                 <p><i class="fas fa-gamepad"></i> <strong>Resume:</strong> <a href="./assets/img/Resume (1).pdf" target="_blank">Download Resume</a></p>
             </div>
-            <div class="map-placeholder">
-                <p>[Map Placeholder]</p>
-            </div>
         </div>
     </section>
 
@@ -148,11 +147,14 @@
         const projectGrid = document.querySelector('.project-grid');
 
         levelUpBtn.addEventListener('click', function() {
-            if (projectGrid.dataset.state === 'front') {
-                projectGrid.dataset.state = 'back';
-            } else {
-                projectGrid.dataset.state = 'front';
-            }
+            const currentState = projectGrid.dataset.state;
+            projectGrid.dataset.state = currentState === 'front' ? 'back' : 'front';
+            setTimeout(() => {
+                projectGrid.classList.add('flipping');
+                setTimeout(() => {
+                    projectGrid.classList.remove('flipping');
+                }, 600); // Match the transition duration
+            }, 0); // Small delay to allow state change to register
         });
     </script>
 </body>
